@@ -1,0 +1,26 @@
+<section class="login__section">
+  
+  <div class="login__card" [formGroup]="formulario">
+    	
+    	<button class="login__rellenar" (click)="rellenarDatos()">Rellenar</button>
+
+	    <label class="login__label" for="email">Correo Electrónico:</label>
+	    <input formControlName="email" class="login__input" id="email" type="email" placeholder="uncorreo@gmail.com">
+	    <div class="alerta" *ngIf="!formulario.controls['email'].valid && formulario.controls['email'].touched">
+            Este campo es requerido
+        </div>
+	    
+	    <label class="login__label" for="password">Clave:</label>
+	    <input formControlName="password" class="login__input" id="password" type="password" placeholder="contraseña">
+	    <div class="alerta" *ngIf="!formulario.controls['password'].valid && formulario.controls['password'].touched">
+            Este campo es requerido
+        </div>
+	    
+	    <button (click)="onSubmitLogin(formulario.value)" [disabled]="!formulario.valid" type="button" class="login__button ">Acceder</button>
+	    <!-- 
+	    {{formulario.value | json}}
+	    {{formulario.valid | json}}
+	     -->
+  </div>
+  
+</section>

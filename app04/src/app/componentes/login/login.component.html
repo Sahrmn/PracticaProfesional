@@ -1,0 +1,40 @@
+<body class="align">
+
+  <div class="grid">
+
+    <form class="form login" [formGroup]="formulario">
+
+      <div class="form__field" [ngClass]="{'alerta': formulario.controls['email'].valid === false && formulario.controls['email'].touched === true}">
+          <label for="login__username"><span class="hidden">Correo Electrónico</span></label>
+          <input formControlName="email" id="login__username" type="text" name="username" class="form__input" placeholder="Correo Electrónico" required>
+      </div>
+      <div class="alert_message" *ngIf="!formulario.controls['email'].valid && formulario.controls['email'].touched">
+            Este campo es requerido
+      </div>
+
+      <div class="form__field" [ngClass]="{'alerta': formulario.controls['password'].valid === false && formulario.controls['password'].touched === true}">
+          <label for="login__password"><span class="hidden">Clave</span></label>
+          <input formControlName="password" id="login__password" type="password" name="password" class="form__input" placeholder="Clave" required>
+      </div>
+      <div class="alert_message" *ngIf="!formulario.controls['password'].valid && formulario.controls['password'].touched">
+            Este campo es requerido
+      </div>
+
+      <div class="form__field">
+          <input (click)="onSubmitLogin(formulario.value)" [disabled]="!formulario.valid" type="submit" value="Ingresar">
+      </div>
+
+    </form>
+    <!-- 
+    {{formulario.value | json}}
+    {{formulario.valid | json}}
+     -->
+    <p class="text--center">¿No tenes cuenta? <a href="#">Registro</a> </p>
+
+  </div>
+  
+  <div class="grid text--right">
+        <input type="button" (click)="rellenarDatos()" value="Rellenar">
+  </div>
+  
+</body>

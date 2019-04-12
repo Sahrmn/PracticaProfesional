@@ -1,0 +1,20 @@
+<div id="login" class="login-form-container" [formGroup]="formulario">
+  <header>INGRESO</header>
+  <fieldset>
+    <div class="input-wrapper" [ngClass]="{'alerta': formulario.controls['email'].valid === false && formulario.controls['email'].touched === true}">
+      <input formControlName="email" type="text" placeholder="tuemail@email.com" />
+    </div>
+    <div class="input-wrapper" [ngClass]="{'alerta': formulario.controls['password'].valid === false && formulario.controls['password'].touched === true}">
+      <input formControlName="password" type="password" placeholder="clave" />
+    </div>
+    <button (click)="onSubmitLogin(formulario.value)" [disabled]="!formulario.valid" id="continue" type="button">CONTINUAR</button>
+
+    <!-- 
+    {{formulario.value | json}}
+    {{formulario.valid | json}}
+    {{formulario.controls['email'].valid | json}}
+     -->
+
+    <button id="rellenar" (click)="rellenarDatos()" type="button">RELLENAR</button>
+  </fieldset>
+</div>
