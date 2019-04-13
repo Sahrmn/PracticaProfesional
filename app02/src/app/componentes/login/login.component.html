@@ -3,9 +3,9 @@
   <div class="login__card" [formGroup]="formulario">
     	
     	<button class="login__rellenar" (click)="rellenarDatos()">Rellenar</button>
-
 	    <label class="login__label" for="email">Correo Electrónico:</label>
-	    <input formControlName="email" class="login__input" id="email" type="email" placeholder="uncorreo@gmail.com">
+		<input formControlName="email" class="login__input" id="email" type="email" placeholder="uncorreo@gmail.com">
+
 	    <div class="alerta" *ngIf="!formulario.controls['email'].valid && formulario.controls['email'].touched">
             Este campo es requerido
         </div>
@@ -16,7 +16,7 @@
             Este campo es requerido
         </div>
 	    
-	    <button (click)="onSubmitLogin(formulario.value)" [disabled]="!formulario.valid" type="button" class="login__button ">Acceder</button>
+	    <button (click)="onSubmitLogin(formulario.value)" [disabled]="!formulario.valid" type="button" class="login__button "><label for="">Acceder</label> <img class="img-login" src="./assets/images/iniciar.svg" alt=""></button>
 	    <!-- 
 	    {{formulario.value | json}}
 	    {{formulario.valid | json}}
