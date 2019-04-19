@@ -23,29 +23,12 @@ $fuente: 'SFCartoonistHand';
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.7fr 1.3fr;
-  grid-template-areas: "Options" "Games";
-  //background-image: linear-gradient(-90deg, $principal1, $principal2, $principal3);
-}
-
-.Options {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "." ".";
-  grid-area: Options;
-}
-
-.Games {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "." "." ".";
-  grid-area: Games;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "." "." "." ".";
 }
 
 button{
-	height: 102px;
+	height: 128px;
 	font-family: $fuente, sans-serif;
 	border-radius: 10px;
 	margin: 6px;
@@ -57,15 +40,14 @@ button{
 }
 
 button:active{
-/*Gracias a que el elemento está en posición relativa, podemos bajarlo 4 px sin alterar el HTML*/
-top:4px;
+  top:4px;
 }
 
-$color_idioma: #b12b43;
-$color_tema: #dcde4f;
+$color_idioma: #cc870a;
+//$color_tema: #dcde4f;
 $color_num: #264875;
-$color_color: #553b80;
-$color_animal: #20565a;
+$color_color: #d2d20f;
+$color_animal: #71c51f;
 
 .img-btn{
 	width: 20%;
@@ -76,73 +58,66 @@ $color_animal: #20565a;
 	margin-left: 10px;
 }
 
-#idioma:active{
-	-moz-box-shadow: 0px 1px 0px 0px $color_idioma;
-	-webkit-box-shadow: 0px 1px 0px 0px $color_idioma;
-	box-shadow: 0px 1px 0px 0px $color_idioma;	
+@mixin btn-principal($color-principal, $color-secundario){
+  background-color: $color-principal;
+  -moz-box-shadow: 0px 7px 0px 0px $color-secundario;
+  -webkit-box-shadow: 0px 7px 0px 0px $color-secundario;
+  box-shadow: 0px 7px 0px 0px $color-secundario;
+}
+
+@mixin btn-active($color){
+  -moz-box-shadow: 0px 1px 0px 0px $color;
+  -webkit-box-shadow: 0px 1px 0px 0px $color;
+  box-shadow: 0px 1px 0px 0px $color;
 }
 
 #idioma{
+  @include btn-principal(orange, $color_idioma);
+}
+
+#idioma:active{
+  @include btn-active($color_idioma);
+}
+
+/*#tema{
 	background-color: #de1b3f;
 	-moz-box-shadow: 0px 7px 0px 0px $color_idioma;
 	-webkit-box-shadow: 0px 7px 0px 0px $color_idioma;
 	box-shadow: 0px 7px 0px 0px $color_idioma;
 }
 
-#tema{
-	background-color: #FCFF4B;
-	-moz-box-shadow: 0px 7px 0px 0px $color_tema;
-	-webkit-box-shadow: 0px 7px 0px 0px $color_tema;
-	box-shadow: 0px 7px 0px 0px $color_tema;
-}
-
 #tema:active{
 	-moz-box-shadow: 0px 1px 0px 0px $color_tema;
 	-webkit-box-shadow: 0px 1px 0px 0px $color_tema;
 	box-shadow: 0px 1px 0px 0px $color_tema;	
-}
+}*/
 
 #colores{
-	background-color: $principal1;
-	-moz-box-shadow: 0px 7px 0px 0px $color_color;
-	-webkit-box-shadow: 0px 7px 0px 0px $color_color;
-	box-shadow: 0px 7px 0px 0px $color_color;
+  @include btn-principal($principal1, $color_color);
 }
 
 #colores:active{
-	-moz-box-shadow: 0px 1px 0px 0px $color_color;
-	-webkit-box-shadow: 0px 1px 0px 0px $color_color;
-	box-shadow: 0px 1px 0px 0px $color_color;	
+  @include btn-active($color_color);
 }
 
 #numeros{
-	background-color: $principal2;
-	-moz-box-shadow: 0px 7px 0px 0px $color_num;
-	-webkit-box-shadow: 0px 7px 0px 0px $color_num;
-	box-shadow: 0px 7px 0px 0px $color_num;
+  @include btn-principal($principal2, $color_num);
 }
 
 #numeros:active{
-	-moz-box-shadow: 0px 1px 0px 0px $color_num;
-	-webkit-box-shadow: 0px 1px 0px 0px $color_num;
-	box-shadow: 0px 1px 0px 0px $color_num;
+  @include btn-active($color_num);
 }
 
 #animales{
-	background-color: $principal3;
-	-moz-box-shadow: 0px 7px 0px 0px $color_animal;
-	-webkit-box-shadow: 0px 7px 0px 0px $color_animal;
-	box-shadow: 0px 7px 0px 0px $color_animal;
+  @include btn-principal($principal3, $color_animal);
 }
 
 #animales:active{
-	-moz-box-shadow: 0px 1px 0px 0px $color_animal;
-	-webkit-box-shadow: 0px 1px 0px 0px $color_animal;
-	box-shadow: 0px 1px 0px 0px $color_animal;
+  @include btn-active($color_animal);
 }
 
 .login__section {
-  background-image: linear-gradient(-90deg, $principal1, $principal2, $principal3);
+  background-image: linear-gradient(-90deg, $bg1, $bg2, $bg3);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -193,7 +168,7 @@ $color_animal: #20565a;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-top: 12px;
-  background-image: linear-gradient(-90deg, $principal1, $principal2, $principal3);
+  background-image: linear-gradient(-90deg, $bg1, $bg2, $bg3);
   height: 38px;
   font-family: "SFCartoonistHand", sans-serif;
   font-weight: 600;
@@ -249,6 +224,18 @@ $color_animal: #20565a;
   100% {
     border-radius: 50%;
   }
+}
+
+.splash {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(-90deg, $bg1, $bg2, $bg3);
+    font-family: $fuente, sans-serif;
 }
 
 

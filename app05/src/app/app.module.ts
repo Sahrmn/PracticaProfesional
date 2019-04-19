@@ -14,12 +14,14 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { LoginComponent } from './componentes/login/login.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SplashComponent } from './componentes/splash/splash.component';
 
 @NgModule({
   declarations: [
   	AppComponent,
   	LoginComponent,
-    HomeComponent
+    HomeComponent,
+    SplashComponent,
   	],
   entryComponents: [],
   imports: [

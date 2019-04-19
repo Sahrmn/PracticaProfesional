@@ -19,7 +19,6 @@ export class LoginComponent implements OnInit {
     email: new FormControl(''),
     password: new FormControl('')
   });
-
   
   constructor(private  authService:  AuthService, private formB: FormBuilder) {
   
@@ -35,7 +34,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmitLogin(formValues){
-    //hacer validaciones
     this.authService.login(formValues.email, formValues.password);
   }
 

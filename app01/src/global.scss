@@ -40,7 +40,7 @@ label {
   width: 329px;
 }
 #card__home {
-  height: 110px;
+  height: 90px;
   margin: 2rem auto 1.5rem auto;
 }
 #card-content {
@@ -141,7 +141,7 @@ label {
   color: white;
   font-family: $letra_semibold;
   height: 373px;
-  margin: 0 22px 0 22px;
+  margin: 0 10px 0 10px;
   transition: 0.25s;
   width: 164px;
   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
@@ -173,3 +173,17 @@ label {
 button:hover{
   box-shadow: 0px 1px 18px #24c64f;
 }
+
+//SCREEN
+
+.splash {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-linear-gradient(bottom, $verde1, $verde2);
+}
+

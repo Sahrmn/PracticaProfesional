@@ -7,10 +7,10 @@ import { auth } from 'firebase/app';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthService {
 
-
-  constructor(private AFauth: AngularFireAuth, private router: Router) {
+  constructor(private AFauth: AngularFireAuth, public router: Router) {
 
   //this.afAuth.authState.subscribe(user => {
    // console.log(user);
@@ -28,9 +28,11 @@ export class AuthService {
      this.AFauth.auth.signInWithEmailAndPassword(email, password).then(res =>{
        console.log(res);
        this.router.navigate(['home']);
-     }).catch(err => console.log("error: " + err))
+     }).catch(function(error){
+       console.log("Error logeando: " + error);
+       alert("Usuario o contraseña incorrectos");
+     })
   }
-
 
 /*
   //logout

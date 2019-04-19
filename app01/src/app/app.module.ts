@@ -17,7 +17,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { SplashComponent } from './componentes/splash/splash.component';
 
 /*
 
@@ -30,7 +30,8 @@ generar splash e icon: https://blog.ng-classroom.com/blog/tips/preparando-iconos
   declarations: [
   AppComponent,
   LoginComponent,
-  HomeComponent
+  HomeComponent,
+  SplashComponent
   ],
   entryComponents: [],
   imports: [

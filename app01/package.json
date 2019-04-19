@@ -41,6 +41,7 @@
     "firebase": "^5.9.3",
     "firebase-admin": "^7.2.0",
     "rxjs": "~6.3.3",
+    "rxjs-compat": "^6.4.0",
     "zone.js": "~0.8.29"
   },
   "devDependencies": {
