@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.ionic.starter.app0001pp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>PhotoBuild</name>
+    <name>Photo Consortium</name>
     <description>App para Practica Profesional</description>
     <author email="samy32m@gmail.com" href="http://ionicframework.com/">Samantha Moreno</author>
     <content src="index.html" />

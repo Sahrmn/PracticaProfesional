@@ -1,0 +1,86 @@
+@font-face {
+    src: url('../../assets/fonts/BebasNeue/BebasNeue-Regular.ttf');
+    font-family: "Bebas Neue";
+}
+
+.flipOutX {
+  -webkit-animation-name: flipOutX;
+  animation-name: flipOutX;
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes flipOutX {
+  0% {
+  -webkit-transform: perspective(400px);
+  transform: perspective(400px);
+  }
+  30% {
+  -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+  transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+  opacity: 1;
+  }
+  100% {
+  -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  opacity: 0;
+  }
+  }
+  @keyframes flipOutX {
+  0% {
+  -webkit-transform: perspective(400px);
+  transform: perspective(400px);
+  }
+  30% {
+  -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+  transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+  opacity: 1;
+  }
+  100% {
+  -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  opacity: 0;
+  }
+} 
+
+page-splash {
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: #ff9600;
+        flex-direction: column;
+
+        div:first-child {
+            margin-top: 20px;
+            font-size: 6vh;
+            font-family: "Bebas Neue";
+            color: black;
+            text-align: center;
+        }
+
+        div.nombre {
+            margin-top: 20px;
+            font-size: 4vh;
+            font-family: "Bebas Neue";
+            color: black;
+            text-align: center;
+        }
+    }
+
+    img {
+      width: 24vh;
+      animation-iteration-count: infinite;
+      animation-duration: 1.6s;
+      animation-delay: .7s;
+    }
+
+}

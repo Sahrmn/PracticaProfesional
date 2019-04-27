@@ -1,0 +1,63 @@
+<ion-content class="naranja">
+
+  <div class="vertical-container">
+    <div class="horizontal-container">
+      <div class="header">
+        <img src="../../assets/imgs/logo.png" />
+        <h1>RELEVAMIENTO VISUAL</h1>
+      </div>
+
+      <div style="width: 100%; text-align: center;">
+        <input type="text" placeholder="Correo electrónico" [(ngModel)]="email" />
+        <div class="decoration"></div>
+      </div>
+
+      <div style="width: 100%; text-align: center;">
+        <input type="password" placeholder="Contraseña" [(ngModel)]="password" />
+        <div class="decoration"></div>
+      </div>
+
+      <button ion-button class="boton" color="dark" outline (click)="Login()" [disabled]="estadoBoton">ACCEDER</button>
+      
+      <div class="botones">
+      <ion-list radio-group>
+      <ion-row>
+      <ion-col>
+      <ion-item>
+      <ion-label>ADMIN</ion-label>
+      <ion-radio radio radio-inline radio-gray outline (click)="SetearUsuario('admin@gmail.com', '111111')"></ion-radio>
+      </ion-item>
+      </ion-col>
+      <ion-col>
+      <ion-item>
+      <ion-label>INVITADO</ion-label>
+      <ion-radio outline (click)="SetearUsuario('invitado@gmail.com', '222222')"></ion-radio>
+      </ion-item>
+      </ion-col>
+      <ion-col>
+      <ion-item>
+      <ion-label>USUARIO</ion-label>
+      <ion-radio outline (click)="SetearUsuario('usuario@gmail.com', '333333')"></ion-radio>
+      </ion-item>
+      </ion-col>
+      <ion-col>
+      <ion-item>
+      <ion-label>ANONIMO</ion-label>
+      <ion-radio outline (click)="SetearUsuario('anonimo@gmail.com', '444444')"></ion-radio>
+      </ion-item>
+      </ion-col>
+      <ion-col>
+      <ion-item>
+      <ion-label>TESTER</ion-label>
+      <ion-radio outline (click)="SetearUsuario('tester@gmail.com', '555555')"></ion-radio>
+      </ion-item>
+      </ion-col>
+      </ion-row>
+      </ion-list>
+      </div>
+    </div>
+  </div>
+
+
+
+</ion-content>

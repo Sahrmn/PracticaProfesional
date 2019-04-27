@@ -1,0 +1,58 @@
+
+<div class="alert" [ngClass]="{'ocultar':ocultarAlert}">
+
+  <div class="alert-message animation-target" [ngClass]="{'background-blue':config.sala == 'Cosasfeas'}">
+    <h1>{{tituloAlert}}</h1>
+    <p>{{mensajeAlert}}</p>
+    <div class="botones">
+      <button ion-button outline (click)="OcultarAlert()" [ngClass]="{'ocultar':ocultarBotonCancelar,'buttons-blue':config.sala == 'Cosasfeas'}">No</button>
+      <button ion-button outline (click)="handlerAlert()" [ngClass]="{'buttons-blue':config.sala == 'Cosasfeas'}">Sí</button>
+    </div>
+  </div>
+
+</div>
+
+
+<ion-content class="card-background-page" (ionScroll)="onScroll()">
+
+  <div class="spinner" [ngClass]="{'ocultar':ocultarSpinner}">
+    <img src="../../assets/imgs/spinner.gif" alt="">
+  </div>
+
+  <ion-card *ngFor="let item of fotos">
+    <img src={{item.url}} />
+
+    <ion-card-title>
+      {{item.usuario}}
+
+    </ion-card-title>
+    <ion-card-content>
+        
+      <ion-row class="cardfooter">
+        <ion-col>
+            
+          <ion-icon name={{icono}} (click)="Votar(item.referencia)" [ngClass]="{'rojo':item.referencia == childDeLaImagen.child && config.sala == 'Cosaslindas', 'azul':item.referencia == childDeLaImagen.child && config.sala == 'Cosasfeas'}"></ion-icon>
+          <span>{{item.votos}}</span>
+        </ion-col>
+      </ion-row>
+
+    </ion-card-content>
+
+  </ion-card>
+
+  <div id="checkpoint"></div>
+
+</ion-content>
+
+<ion-footer>
+    <div class="botones">
+        <button ion-button color={{config.ionColor}} (click)="SacarFoto()" [ngClass]="{'ocultar':!ocultarSpinner}" id="btnSacarFoto"><ion-icon name="camera"></ion-icon></button>
+        <button ion-button color={{config.ionColor}} (click)="MostrarGrafico()" [disabled]="!ocultarSpinner"><ion-icon name="stats"></ion-icon></button>
+        <button ion-button color={{config.ionColor}} (click)="MostrarAlert('', '¿SALIR?', Logout)"><ion-icon name="power"></ion-icon></button>
+    </div>
+    <ion-navbar color={{config.ionColor}}>
+    <ion-title class="subtitle" >{{sala}}</ion-title>
+    <p class="subtitle" style="text-align: right;">{{usuario.mail}}</p>
+    </ion-navbar>
+</ion-footer>
+    

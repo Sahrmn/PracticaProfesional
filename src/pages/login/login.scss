@@ -1,0 +1,186 @@
+@font-face {
+    src: url('../../assets/fonts/BebasNeue/BebasNeue-Regular.ttf');
+    font-family: "Bebas Neue";
+}
+
+.naranja{
+  background: #ff6600;
+  background-color: #ff6600;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
+  opacity: 1;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+  opacity: 1;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: black;
+  opacity: 1;
+}
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       black,
+);
+
+
+page-login {
+
+    body { width: 100%; }
+
+    div.vertical-container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+        background: linear-gradient(#ff9600, #ff6600);
+        background-size:  cover;
+    }
+
+    div.horizontal-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    div.header {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    input {
+        width: 75%;
+        border: solid;
+        border-bottom: black solid 2px;
+        margin: 10px;
+        padding: 5px;
+        margin: 7vh auto 7vh auto;
+        font-size: 25px;
+        background-color: transparent;
+        color: black;
+
+    }
+
+    div.decoration {
+        position: relative;
+        width: 0%;
+        height: 2px;
+        margin: 0 auto 0 auto;
+        background-color: black;
+        bottom: 7.2vh;
+    }
+
+    button[ion-button] {
+        padding: 30px;
+        width: 20ch;
+        margin-left: auto;
+        margin-right: auto;
+        text-transform: none;
+        font-size: 30px;
+        font-family: "Bebas Neue";
+        background-color: transparent;
+        background: transparent;
+        color:black,
+    }
+
+    img {
+        width: 110px;
+        height: auto;
+    }
+
+    h1 {
+        font-family: "Bebas Neue";
+        color: black;
+        display: inline;
+        margin-left: 25px;
+        font-size: 40px;
+        font-weight: 100;
+    }
+
+    h3 {
+      font-family: "Bebas Neue";
+      color: black;
+      display: inline;
+      margin-left: 25px;
+      font-weight: 100;
+      text-align: center;
+    }
+
+    div.botones {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      bottom: 0;
+  
+      height: 100px;
+      width: 100%;
+      
+      button[ion-button] {
+          margin-top: 20px;
+          
+          font-size: 70px;
+          padding: 30px;
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          box-sizing: border-box;
+
+          img { height: 50%; }
+      }
+
+      ion-list{
+        margin-top: 20px;
+        
+        font-size: 70px;
+        padding: 30px;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: transparent;
+        color:black;
+
+        img { height: 50%; }
+      }
+
+      ion-item{
+        background-color: black;
+        border: black solid;
+        color: white;
+        width:170px;
+        height:100px;
+      }
+
+      ion-label{
+        font-size: 20px;
+      }
+
+      ion-radio.checked{
+        background-color: black;
+        border: black 1px;
+        color: black;
+      }
+
+      ion-radio{
+        color: white;
+      }
+
+      
+      * {
+          font-size: 40px; 
+      }
+  }
+}

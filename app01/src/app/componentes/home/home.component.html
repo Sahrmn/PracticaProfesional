@@ -1,33 +1,39 @@
-<div id="card__home" class="card">
-    <div id="card-content">
-      <div id="card-title">
-        <h2>BIENVENIDO</h2>
-        <div class="underline-title underline-home"></div>
+<div *ngIf="!mostrar" class="">
+  <div id="card__home" class="card">
+      <div id="card-content">
+        <div id="card-title">
+          <h2>BIENVENIDO</h2>
+          <div class="underline-title underline-home"></div>
+        </div>
       </div>
-    </div>
-</div>
-<div class="grid-container-home">
+  </div>
+  <div class="grid-container-home">
+      
+      <button id="cosas_lindas" class="btn-home" (click)="listarLindas()">
+        <span class="icon">
+          <img class="img-lindo" src="./assets/images/happy.png" alt="">  
+        </span>
+        <p>
+          COSAS LINDAS
+        </p>
+      </button>
+      
+      <button id="cosas_feas" class="btn-home" (click)="listarFeas()">
+        <span class="icon">
+          <img class="img-lindo" src="./assets/images/angry.png" alt="">  
+        </span>
+        <p>
+          COSAS FEAS
+        </p>
+      </button>
     
-    <button id="cosas_lindas" class="btn-home">
-      <span class="icon">
-        <img class="img-lindo" src="./assets/images/happy.png" alt="">  
-      </span>
-      <p>
-      COSAS LINDAS
-      </p>
-    </button>
-    
-    <button id="cosas_feas" class="btn-home">
-      <span class="icon">
-        <img class="img-lindo" src="./assets/images/angry.png" alt="">  
-      </span>
-      <p>
-        COSAS FEAS
-      </p>
-    </button>
-  
-    <!--input id="cosas_lindas" type="button" value="COSAS LINDAS">
-    <input id="cosas_feas" type="button" value="COSAS FEAS"-->
- <!-- angry/happy(grin, laugh) -->
+      <!--input id="cosas_lindas" type="button" value="COSAS LINDAS">
+      <input id="cosas_feas" type="button" value="COSAS FEAS"-->
+   <!-- angry/happy(grin, laugh) -->
 
+  </div>
+</div>
+
+<div *ngIf="mostrar" class="">
+  <app-list></app-list>
 </div>

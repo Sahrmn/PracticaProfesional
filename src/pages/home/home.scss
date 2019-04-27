@@ -1,0 +1,68 @@
+@font-face {
+  src: url('../../assets/fonts/BebasNeue/BebasNeue-Regular.ttf');
+  font-family: "Bebas Neue";
+}
+
+page-home {
+
+    .scroll-content { overflow: hidden; }
+
+    .card-background-page {
+
+      background-color: black;
+
+        button[ion-button] {
+            
+            width: 100%;
+            margin: 0;
+            text-transform: none;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            height: 50%;
+            position: relative;
+            text-align: center;
+            padding: 0;
+            background-color: black;
+        }
+
+        button[ion-button]:first-child { margin-bottom: 10px; }
+
+        .card-title {
+          position: absolute;
+          top: 36%;
+          font-size: 4.0em;
+          width: 100%;
+          font-weight: bold;
+          color: #fff;
+          background-color: black;
+          z-index: 2;
+          font-family: "Bebas Neue";
+        }
+      
+        .card-subtitle {
+          font-size: 2.0em;
+          position: absolute;
+          top: 52%;
+          width: 100%;
+          color: white;
+          background-color: black;
+          z-index: 2;
+        }
+
+        .card-subtitle:last-child { top: 60%; }
+      }
+
+      .sombreado {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          z-index: 1;
+          background-color: black;
+          opacity: .4;
+      }
+}
