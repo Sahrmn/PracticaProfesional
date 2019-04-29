@@ -14,6 +14,8 @@ import { environment } from '../environments/environment';
 import { LoginComponent } from './componentes/login/login.component';  
 import { HomeComponent } from './componentes/home/home.component';  
 import { ListComponent } from './componentes/list/list.component';  
+import { GraficaComponent } from './componentes/grafica/grafica.component';  
+
 import { AngularFireModule } from '@angular/fire'; 
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
@@ -40,6 +42,7 @@ generar splash e icon: https://blog.ng-classroom.com/blog/tips/preparando-iconos
     HomeComponent,
     SplashComponent,
     ListComponent,
+    GraficaComponent
   ],
   entryComponents: [],
   imports: [
