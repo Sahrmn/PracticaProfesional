@@ -11,6 +11,12 @@ export class AuthService {
   constructor(private AFauth: AngularFireAuth, private router: Router) { }
 
   login(email: string, password: string){
+    if(email == '' || password == '')
+    {
+      alert("Datos necesarios");
+    }
+    else{
+
      this.AFauth.auth.signInWithEmailAndPassword(email, password).then(res =>{
        console.log(res);
        this.router.navigate(['home']);
@@ -18,5 +24,6 @@ export class AuthService {
        console.log("Error logeando: " + error);
        alert("Usuario o contraseña incorrectos");
      })
+    }
   }
 }

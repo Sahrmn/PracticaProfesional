@@ -1,0 +1,62 @@
+@mixin btn-principal($color-principal, $color-secundario){
+  background-color: $color-principal;
+  -moz-box-shadow: 0px 7px 0px 0px $color-secundario;
+  -webkit-box-shadow: 0px 7px 0px 0px $color-secundario;
+  box-shadow: 0px 7px 0px 0px $color-secundario;
+}
+
+#boton1{
+  @include btn-principal(yellow, #dede1b);
+}
+
+#boton2{
+  @include btn-principal(orange, #d2962a);
+}
+
+#boton3{
+  @include btn-principal(red, #b90e0e);
+}
+
+#boton4{
+  @include btn-principal(lawngreen, #66bd11);
+}
+
+#boton5{
+  @include btn-principal(blue, #040446);
+}
+
+/*button{
+	height: 103px !important;
+	margin: 4px !important;
+}*/
+
+@media screen and (max-width:639px) {
+  button{
+    height: 100px;
+  }
+
+  .img-btn{
+    height: 40%;
+  }
+}
+
+@media screen and (max-width:1024px) and (min-width:640px) {
+  button{
+    height: 50px;
+  }
+
+  .img-btn{
+    height: 55%;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  button{
+    height: 150px;
+  }
+
+  .img-btn{
+    height: 60%;
+  }
+}
+

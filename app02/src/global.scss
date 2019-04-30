@@ -50,7 +50,8 @@ $color_color: #d2d20f;
 $color_animal: #71c51f;
 
 .img-btn{
-	width: 20%;
+	max-width: 20%;
+  mix-width: 14%;
 }
 
 .img-login{
@@ -71,11 +72,19 @@ $color_animal: #71c51f;
   box-shadow: 0px 1px 0px 0px $color;
 }
 
-#idioma{
+#idioma-esp{
   @include btn-principal(orange, $color_idioma);
 }
 
-#idioma:active{
+#idioma-esp:active{
+  @include btn-active($color_idioma);
+}
+
+#idioma-ing{
+  @include btn-principal(orange, $color_idioma);
+}
+
+#idioma-ing:active{
   @include btn-active($color_idioma);
 }
 

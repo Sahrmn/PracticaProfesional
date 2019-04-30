@@ -26,8 +26,11 @@
 	 <div></div>
   </div>
 	 -->
-  	<button id="idioma"><img class="img-btn" src="./assets/images/argentina.svg" alt=""></button>
-  	<button id="colores"><img class="img-btn" src="./assets/images/colores.svg" alt=""></button>
-   	<button id="numeros"><img class="img-btn" src="./assets/images/numero.svg" alt=""></button>
-	<button id="animales"><img class="img-btn" src="./assets/images/delfin.svg" alt=""></button>
+  	<button *ngIf="bandera" id="idioma-esp" (mousedown)="cambiarIdioma(bandera)"><img class="img-btn" src="./assets/images/argentina.svg" alt=""></button>
+  	<button *ngIf="!bandera" id="idioma-ing" (mousedown)="cambiarIdioma(bandera)"><img class="img-btn" src="./assets/images/estados-unidos.svg" alt=""></button>
+  	<button id="colores" (click)="reproducirAudio('colores')" routerLink="juego"><img class="img-btn" src="./assets/images/colores.svg" alt=""></button>
+   	<button id="numeros" (click)="reproducirAudio('numeros')" routerLink="juego"><img class="img-btn" src="./assets/images/numero.svg" alt=""></button>
+	<button id="animales" (click)="reproducirAudio('animales')" routerLink="juego"><img class="img-btn" src="./assets/images/delfin.svg" alt=""></button>
 </div>
+
+<router-outlet></router-outlet>

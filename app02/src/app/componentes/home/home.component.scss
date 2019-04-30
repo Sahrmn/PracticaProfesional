@@ -1,0 +1,29 @@
+@media screen and (max-width:640px) {
+  button{
+	height: 128px;
+  }
+
+  .img-btn{
+  	height: 40%;
+  }
+}
+
+@media screen and (max-width:1024px) and (min-width:640px) {
+  button{
+	height: 68px;
+  }
+
+  .img-btn{
+  	height: 55%;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  button{
+	height: 165px;
+  }
+
+  .img-btn{
+  	height: 60%;
+  }
+}
