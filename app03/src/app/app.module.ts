@@ -16,6 +16,15 @@ import { LoginComponent } from './componentes/login/login.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SplashComponent } from './componentes/splash/splash.component';
+import { DeviceMotion, DeviceMotionAccelerationData } from '@ionic-native/device-motion/ngx';
+import { Vibration } from '@ionic-native/vibration/ngx';
+import { Flashlight } from '@ionic-native/flashlight/ngx';
+
+/*
+para la linterna: https://ionicframework.com/docs/native/flashlight   
+para vibrar:   https://ionicframework.com/docs/native/vibration   
+
+*/
 
 @NgModule({
   declarations: [
@@ -36,7 +45,10 @@ import { SplashComponent } from './componentes/splash/splash.component';
   	],
   providers: [
     StatusBar,
-    SplashScreen,
+    Vibration,
+    SplashScreen, 
+    Flashlight,
+    DeviceMotion,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
