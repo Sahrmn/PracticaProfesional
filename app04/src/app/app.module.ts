@@ -16,6 +16,9 @@ import { LoginComponent } from './componentes/login/login.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SplashComponent } from './componentes/splash/splash.component';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +40,7 @@ import { SplashComponent } from './componentes/splash/splash.component';
   providers: [
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

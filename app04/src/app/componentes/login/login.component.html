@@ -1,3 +1,5 @@
+<div class="container">
+  
 <body class="align">
 
   <div class="grid">
@@ -30,11 +32,12 @@
     {{formulario.valid | json}}
      -->
     <p class="text--center">¿No tenes cuenta? <a href="#">Registro</a> </p>
+  <div class=" text--right">
+        <input type="button" (click)="rellenarDatos()" value="Rellenar">
+  </div>
 
   </div>
   
-  <div class="grid text--right">
-        <input type="button" (click)="rellenarDatos()" value="Rellenar">
-  </div>
   
 </body>
+</div>

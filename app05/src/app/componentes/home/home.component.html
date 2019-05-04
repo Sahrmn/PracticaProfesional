@@ -1,12 +1,54 @@
-<div id="login" class="login-form-container">
-  <header>CREAR NUEVO PARTIDO</header>
-  <fieldset>
-    <div class="input-wrapper">
-      <input formControlName="player1" type="text" placeholder="Jugador 1" />
-    </div>
-    <div class="input-wrapper">
-      <input formControlName="player2" type="text" placeholder="Jugador 2" />
-    </div>
-    <button id="crear" type="button">CREAR</button>
-  </fieldset>
+<div class="container">
+  <div class="row">
+    
+      <div id="" class="home-container">
+        <header>CREAR NUEVO PARTIDO</header>
+        <fieldset>
+          <div class="input-wrapper">
+            <input [(ngModel)]="jugador1" type="text" placeholder="Jugador 1" />
+          </div>
+          <div class="input-wrapper">
+            <input [(ngModel)]="jugador2" type="text" placeholder="Jugador 2" />
+          </div>
+          <button id="crear" type="button" (click)="crearPartido()">CREAR</button>
+        </fieldset>
+      </div>
+
+  </div>
+<!-- LISTADO PARTIDOS -->
+
+<div class="row">
+  
+    <div id="" class="partidos-container">
+    <header>PARTIDOS</header>
+    <fieldset>
+      <table class="table table-striped table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Fecha</th>
+          <th scope="col">Jugador 1</th>
+          <th scope="col">Jugador 2</th>
+          <th scope="col">Resultado</th>
+          <th scope="col">Foto</th>
+          <th scope="col">Video</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let partido of partidos">
+            <td>{{partido.fecha}} </td>
+            <td>{{partido.jugador1}} </td> 
+            <td>{{partido.jugador1}} </td> 
+            <td>{{partido.resultado_j1}} - {{partido.resultado_j2}}</td> 
+            <td>{{partido.foto}} </td> 
+            <td>{{partido.video}} </td> 
+        </tr>
+      </tbody>
+    </table>
+      
+    </fieldset>
+  </div>
+</div>
+
+
+
 </div>

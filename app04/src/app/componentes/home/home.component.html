@@ -1,11 +1,15 @@
+
 <body class="align">
   <div class="grid-container">
-      <label class="lbl-total" for=""><span>$</span>1000</label>
+      <label class="lbl-total" for=""><span>$</span>{{valor}}</label>
       <div class="Botones">
-          <button class="btn-home">
+          <button class="btn-home" (click)="scanCode(traerCodigos)">
             Cargar
           </button>
-          <button class="btn-home">
+          <button class="btn-home" (click)="traerCodigos()">
+            TRAER CODIGO - PRUEBA
+          </button>
+          <button class="btn-home" (click)="limpiar()">
             Limpiar
           </button>
       </div>

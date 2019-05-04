@@ -9,7 +9,12 @@ export class SplashComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  	this.reproducir('splash');
+  }
 
-  
+  reproducir(nom_audio) {
+    const audio = new Audio('assets/sounds/' + nom_audio + '.mp3');
+    audio.play();
+  }
 }

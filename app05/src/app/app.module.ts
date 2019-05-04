@@ -15,6 +15,9 @@ import { LoginComponent } from './componentes/login/login.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SplashComponent } from './componentes/splash/splash.component';
+import { AngularFirestore, AngularFirestoreModule } from "@angular/fire/firestore"; 
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+
 
 @NgModule({
   declarations: [
@@ -31,11 +34,13 @@ import { SplashComponent } from './componentes/splash/splash.component';
   	AngularFireAuthModule,
   	AngularFireModule.initializeApp(environment.firebase),
   	FormsModule,
+    AngularFireDatabaseModule,
     ReactiveFormsModule,
   	],
   providers: [
     StatusBar,
     SplashScreen,
+    AngularFirestore,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
